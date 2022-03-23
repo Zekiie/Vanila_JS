@@ -13,11 +13,30 @@
     <div id="root">
       <main class="wrapper">
         <div class="card-wrapper">
-          <div class="header">
-            <img src="../src/assets/chip.png" alt="chip" >
-            <img src="../src/assets/visa.png" alt="logo" >
+          <div class="card-header">
+            <img class="img-card_chip" src="https://raw.githubusercontent.com/Zekiie/Vanila_JS/main/src/assets/chip.png" alt="chip" >
+            <img class="img-card_logo" src="https://raw.githubusercontent.com/Zekiie/Vanila_JS/main/src/assets/visa.png" alt="logo" >
+          </div>
+
+          <div class="card-number">
+            <span id="number-1" class="number">****</span>
+            <span id="number-2" class="number">****</span>
+            <span id="number-3" class="number">****</span>
+            <span id="number-4" class="number">****</span>
+          </div>
+
+          <div class="card-content">
+            <div class="card-content_name">
+              <span class="number">Card Holder</span>
+              <span id="cardholderName" class="number">Full Name</span>
+            </div>
+            <div class="card-content_date">
+              <span class="number">Expires</span>
+              <span id="cardDate" class="number">MM/YY</span>
+            </div>
           </div>
         </div>
+
       </main>
     </div>
     <script src="src/index.js"></script>

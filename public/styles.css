@@ -3,14 +3,68 @@
   padding: 0;
 }
 
+:root {
+  --black-color: #000;
+  --white-color: #fff;
+  --main-light-color: #e7cfc8;
+  --main-blue-color: #7eb2cb;
+}
+body {
+  font: 20px bold Helvetica;
+  color: var(--black-color);
+}
 .wrapper {
   display: flex;
   margin: 0 auto;
   padding: 30px 0;
 }
+
 .card-wrapper {
-  width: 350px;
-  height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  width: 385px;
+  height: 230px;
   margin: auto;
-  border: 1px solid black;
+  background: url("https://images.pexels.com/photos/1028600/pexels-photo-1028600.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=200&w=520") no-repeat center center;
+  border: 1px solid var(--main-light-color);
+  border-radius: 20px;
+  box-shadow: 0 0 10px 5px var(--main-blue-color);
 }
+
+.card-header,
+.card-number,
+.card-content {
+  display: flex;
+  width: 95%;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  margin: 0 auto;
+}
+
+.img-card_chip {
+  width: 70px;
+}
+
+.img-card_logo {
+  width: 80px;
+}
+
+.card-number {
+  font: 2.2rem bold Helvetica;
+  justify-content: flex-start;
+}
+
+.number {
+  margin-right: 20px;
+}
+
+.card-content_name,
+.card-content_date {
+  display: flex;
+  flex-direction: column;
+}
+
+
