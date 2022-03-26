@@ -1,22 +1,22 @@
+@import "variables.css";
+
 * {
   margin: 0;
   padding: 0;
 }
 
-:root {
-  --black-color: #000;
-  --white-color: #fff;
-  --main-light-color: #e7cfc8;
-  --main-blue-color: #7eb2cb;
-}
 body {
-  font: 20px bold Helvetica;
+  font: 16px bold Helvetica;
+  background: var(--main-purple-color);
   color: var(--main-light-color);
 }
 .wrapper {
   display: flex;
+  flex-direction: column;
+  position: relative;
   margin: 0 auto;
   padding: 30px 0;
+  z-index: 1;
 }
 
 .card-wrapper {
@@ -24,13 +24,14 @@ body {
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  width: 385px;
+  width: 95%;
   height: 230px;
   margin: auto;
-  background: url("https://images.pexels.com/photos/6985048/pexels-photo-6985048.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=200&w=520") no-repeat center center;
-  border: 1px solid var(--main-light-color);
+  background: url("https://images.pexels.com/photos/956981/milky-way-starry-sky-night-sky-star-956981.jpeg?auto=compress&cs=tinysrgb&w=760&h=350") no-repeat center center;
   border-radius: 20px;
-  box-shadow: 0 0 10px 5px var(--main-blue-color);
+  box-shadow: 0 10px 40px rgba(14, 42, 90, 0.5);
+  z-index: 1;
+;
 }
 
 .card-header,
@@ -40,7 +41,7 @@ body {
   width: 90%;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 20px;
+  padding: 10px;
   margin: 0 auto;
 }
 
@@ -57,12 +58,8 @@ body {
 }
 
 .card-number {
-  font: 2.2rem bold Helvetica;
+  font: 1.8rem bold Helvetica;
   cursor: pointer;
-}
-
-.number:not(:last-child) {
-  margin-right: 20px;
 }
 
 .card-content_name,
@@ -83,4 +80,9 @@ body {
   margin: 3px 0;
 }
 
+@media only screen and (min-width: 420px) {
+  .card-wrapper {
+    width: 385px;
+  }
+}
 

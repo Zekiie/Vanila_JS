@@ -1,47 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta
+<head>
+  <meta charset="UTF-8"/>
+  <meta
       name="viewport"
       content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
-    />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Sample payment cards</title>
-  </head>
-  <body>
-    <div id="root">
-      <main class="wrapper">
-        <div class="card-wrapper">
-          <div class="card-header">
-            <img class="img-card_chip" src="https://raw.githubusercontent.com/Zekiie/Vanila_JS/main/src/assets/chip.png" alt="chip" >
-            <img class="img-card_logo" src="https://raw.githubusercontent.com/Zekiie/Vanila_JS/main/src/assets/visa.png" alt="logo" >
-          </div>
+  />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+  <title>Sample payment cards</title>
+</head>
+<body>
+<div id="root">
+  <main class="wrapper">
+    <div class="card-wrapper">
+      <div class="card-header">
+        <img class="img-card_chip" src="https://raw.githubusercontent.com/Zekiie/Vanila_JS/main/src/assets/chip.png"
+             alt="chip">
+        <img class="img-card_logo" src="https://raw.githubusercontent.com/Zekiie/Vanila_JS/main/src/assets/visa.png"
+             alt="logo">
+      </div>
 
-          <div class="card-number">
-            <span id="number-1" class="number">****</span>
-            <span id="number-2" class="number">****</span>
-            <span id="number-3" class="number">****</span>
-            <span id="number-4" class="number">****</span>
-          </div>
+      <div class="card-number">
+        <span id="number-1" class="number">****</span>
+        <span id="number-2" class="number">****</span>
+        <span id="number-3" class="number">****</span>
+        <span id="number-4" class="number">****</span>
+      </div>
 
-          <div class="card-content">
-            <div class="card-content_name">
-              <span class="card-content_item">Card Holder</span>
-              <span id="cardholderName" class="card-content_item">Full Name</span>
-            </div>
-            <div class="card-content_date">
-              <span class="card-content_item">Expires</span>
-              <span id="cardDate" class="card-content_item">MM/YY</span>
-            </div>
-          </div>
+      <div class="card-content">
+        <div class="card-content_name">
+          <span class="card-content_item">Card Holder</span>
+          <span id="cardholderName" class="card-content_item">Full Name</span>
         </div>
-
-        <form>
-
-        </form>
-      </main>
+        <div class="card-content_date">
+          <span class="card-content_item">Expires</span>
+          <span id="cardDate" class="card-content_item">MM/YY</span>
+        </div>
+      </div>
     </div>
-    <script src="src/index.js"></script>
-  </body>
+    <div class="form-wrapper">
+      <form autocomplete="off" class="card-form">
+        <filedset class="card-form_row">
+          <label for='cardNumber-1' class="card-label card-label_number">Card number</label>
+          <div class="horizontal-aligning">
+            <input type="number" id="cardNumber-1" class="card-input_number" maxlength="4" required>
+            <input type="number" id="cardNumber-2" class="card-input_number" maxlength="4" required>
+            <input type="number" id="cardNumber-3" class="card-input_number" maxlength="4" required>
+            <input type="number" id="cardNumber-4" class="card-input_number" maxlength="4" required>
+          </div>
+        </filedset>
+        <filedset class="card-form_row">
+          <label for='cardHolder' class="card-label card-label_name">Card holder</label>
+          <input type="text" id="cardHolder" class="card-input_holder" required>
+        </filedset>
+        <filedset class="card-form_row">
+          <div class="horizontal-aligning">
+          <label for='cardDateMonth' class="card-label card-label_date">EXPIRATION DATE</label>
+          <select id="cardDateMonth" required>
+            <option></option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+            <option value="11">11</option>
+            <option value="12">12</option>
+          </select>
+
+
+          <select id="card-expiration-year" required>
+            <option></option>
+            <option>2022</option>
+            <option>2023</option>
+            <option>2024</option>
+            <option>2025</option>
+            <option>2026</option>
+            <option>2027</option>
+          </select>
+          </div>
+          <div class="horizontal-aligning">
+          <label for="cvv">CVV</label>
+          <input type="number" id="cvv" max="3" required>
+          </div>
+        </filedset>
+
+        <button class="card-btn btn-submit">Submit</button>
+      </form>
+    </div>
+  </main>
+</div>
+<script src="src/index.js"></script>
+</body>
 </html>
